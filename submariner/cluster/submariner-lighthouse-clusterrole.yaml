@@ -1,0 +1,59 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: "2020-09-16T12:16:15Z"
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:rules: {}
+    manager: kubectl
+    operation: Update
+    time: "2020-09-16T12:16:15Z"
+  name: submariner-lighthouse
+  resourceVersion: "1949"
+  selfLink: /apis/rbac.authorization.k8s.io/v1/clusterroles/submariner-lighthouse
+  uid: 266cd4b6-e518-44e9-8aca-b3ce440854e9
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - services
+  - namespaces
+  - endpoints
+  verbs:
+  - get
+  - list
+  - watch
+  - update
+- apiGroups:
+  - discovery.k8s.io
+  resources:
+  - endpointslices
+  verbs:
+  - create
+  - get
+  - list
+  - watch
+  - update
+  - delete
+  - deletecollection
+- apiGroups:
+  - lighthouse.submariner.io
+  resources:
+  - '*'
+  verbs:
+  - create
+  - get
+  - list
+  - watch
+  - update
+  - delete
+- apiGroups:
+  - submariner.io
+  resources:
+  - gateways
+  verbs:
+  - get
+  - list
+  - watch

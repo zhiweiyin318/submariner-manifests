@@ -1,0 +1,28 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  creationTimestamp: "2020-09-16T12:16:15Z"
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:roleRef:
+        f:apiGroup: {}
+        f:kind: {}
+        f:name: {}
+      f:subjects: {}
+    manager: kubectl
+    operation: Update
+    time: "2020-09-16T12:16:15Z"
+  name: submariner-operator:globalnet
+  resourceVersion: "1941"
+  selfLink: /apis/rbac.authorization.k8s.io/v1/clusterrolebindings/submariner-operator%3Aglobalnet
+  uid: c0b8f85c-0760-4300-95b8-27af6d5aecb8
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: submariner-operator:globalnet
+subjects:
+- kind: ServiceAccount
+  name: submariner-operator
+  namespace: submariner-operator

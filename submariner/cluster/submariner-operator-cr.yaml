@@ -1,0 +1,201 @@
+apiVersion: submariner.io/v1alpha1
+kind: Submariner
+metadata:
+  creationTimestamp: "2020-09-16T09:26:48Z"
+  generation: 1
+  managedFields:
+  - apiVersion: submariner.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:broker: {}
+        f:brokerK8sApiServer: {}
+        f:brokerK8sApiServerToken: {}
+        f:brokerK8sCA: {}
+        f:brokerK8sRemoteNamespace: {}
+        f:ceIPSecDebug: {}
+        f:ceIPSecIKEPort: {}
+        f:ceIPSecNATTPort: {}
+        f:ceIPSecPSK: {}
+        f:clusterCIDR: {}
+        f:clusterID: {}
+        f:colorCodes: {}
+        f:debug: {}
+        f:namespace: {}
+        f:natEnabled: {}
+        f:repository: {}
+        f:serviceCIDR: {}
+        f:serviceDiscoveryEnabled: {}
+        f:version: {}
+    manager: kubectl
+    operation: Update
+    time: "2020-09-16T09:26:48Z"
+  - apiVersion: submariner.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:clusterCIDR: {}
+        f:clusterID: {}
+        f:colorCodes: {}
+        f:engineDaemonSetStatus:
+          .: {}
+          f:currentNumberScheduled: {}
+          f:desiredNumberScheduled: {}
+          f:numberAvailable: {}
+          f:numberMisscheduled: {}
+          f:numberReady: {}
+          f:observedGeneration: {}
+          f:updatedNumberScheduled: {}
+        f:gateways: {}
+        f:natEnabled: {}
+        f:routeAgentDaemonSetStatus:
+          .: {}
+          f:currentNumberScheduled: {}
+          f:desiredNumberScheduled: {}
+          f:numberAvailable: {}
+          f:numberMisscheduled: {}
+          f:numberReady: {}
+          f:observedGeneration: {}
+          f:updatedNumberScheduled: {}
+        f:serviceCIDR: {}
+    manager: submariner-operator
+    operation: Update
+    time: "2020-09-16T11:53:20Z"
+  name: submariner
+  namespace: submariner-operator
+  resourceVersion: "103238"
+  selfLink: /apis/submariner.io/v1alpha1/namespaces/submariner-operator/submariners/submariner
+  uid: f635ee98-dc2c-4ec3-94cf-5c17e7ca8eb9
+spec:
+  broker: k8s
+  brokerK8sApiServer: 10.0.118.46:42415
+  brokerK8sApiServerToken: eyJhbGciOiJSUzI1NiIsImtpZCI6ImZCd0tjOWNNNU5TWjlrSXllenc1SkY1N1pvZnotcDRsRXRyUzAzNmMwNU0ifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJzdWJtYXJpbmVyLWs4cy1icm9rZXIiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlY3JldC5uYW1lIjoiY2x1c3Rlci1jbHVzdGVyMi10b2tlbi01cHc1YyIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VydmljZS1hY2NvdW50Lm5hbWUiOiJjbHVzdGVyLWNsdXN0ZXIyIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiMDgxMTNmYzQtNTQ4YS00YWVlLWJmZjAtNzY1YmRjZjg2NmFlIiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OnN1Ym1hcmluZXItazhzLWJyb2tlcjpjbHVzdGVyLWNsdXN0ZXIyIn0.PK9gm-Rj_7-yMZGGzYWnzHHhiARQ07HUZ_VJJ6TTPfKZhy0xnLTb4izanSzdxBU67p0z3yuOxRR1wWNxwnhkq01AJSYEDtLauMJCiDECu32NQS2ubJCmcqB6tLbFJ8gHO47DG66TTx_hCtd9Vi_4AmFjewQxuC2dknc6nJwLCA9OQ1zuyN555My5rvVlk_1L7pyIMGz1balVSq_BfvqK4M7Mdlm9FYUDqUbUNqMcDBVJqPJQ8rsZwwpJwv0MYiDtrnOibj1bzX08ZjHllj2z6sHVtgXxL2o2DKWlba1J9OtTwgy8juhv-h2SmvcueU4Mebd3nD1jqtaVBiVrXkC_Vw
+  brokerK8sCA: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJd01Ea3hOakF6TWprd01sb1hEVE13TURreE5EQXpNamt3TWxvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTXhUCjlFRmhQYm4zY2wwaEZTVmhlczhoaVdzTGdML3psOG1CV2kyZ09GOHpUbVRHSGtiUXJDeVlDU0llWlhuenZCMGUKSFo3QzZ5UWMyNzRkWXVZVzRrUGMyQ0JEMkU4SklGV1dKVEhsQWJ3YlNxU2IvbVVMMC9jMmt2UDZ2TWJCOVcvegpyVGxUTXpRbTNWcHNBV3d2UnlBaVZHdmd1dEdOcmJkSEZSMSswclNWeTIzVG5MVFg0bWpnZmxaV2RmcFlYUHhzCk91VEZ5NU12UzZjUU5JRFpvV09taUNOWTZBOWM0a1llRUt6L2NISmFZcjhObGRweEcrbjlRem1GVGNyblFLQS8KaUVOeVFraTZEMWhEYjdjbkNrbE81UTVpWkpYVTJPWE9kU1VZRlY4cG1YdXI5YkN3cEJKSkhMa3l5Snd4OVJuZgpiSmV6Q3BubHk1blNSTnMveXVVQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFHTHI4SWF4bVQzRkdmWVdxeTdFVmFPR2Y4T2QKVC82UlVna3psUk5NWVh2STN1K0hrSEczcXd0TGM4TUhWSFI1VHB0cTN0Q3krODE2SllwU2FsN3lDVTBrVUh2SwpHQnNtK2VoUG00V0FQNkpOOURqVjJqZVF1a29mcDEyZ2Q3dUlGVlQvTGt3SmxHTEI1OUQyM0kxNWtPaSsvazJHCmRYbkRud1B2NzZkSmM5OEVXZUJuRy96alN3d1lTSk5ubTZrVzd6RkRCTHFmOW5nZnJnTUtSYmQ0aGp5Q2l0OEMKOWdQeEREMzA0TTNKL0JBdzRmVS9ZMlFnVDFXUmRQQ2hFbDRaUXRJdStBczREWHhtbXQwN1B2b2RVUnFnUWljUgpGWDVrMnlIZFp5MnMzdHdKTWNrY2lUN1FoWmRXM3Axd3l3SjRwdzRMcU1rUFcva3BOYWJ0VHJWNXV3MD0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+  brokerK8sRemoteNamespace: submariner-k8s-broker
+  ceIPSecDebug: false
+  ceIPSecIKEPort: 500
+  ceIPSecNATTPort: 4500
+  ceIPSecPSK: jGlSivxxnsCFbfqMert38535ijgAYXYCTz1yitx1HKvoZ+nx75bk96CHn0/ZqSq8
+  clusterCIDR: ""
+  clusterID: cluster2
+  colorCodes: blue
+  debug: false
+  namespace: submariner-operator
+  natEnabled: true
+  repository: quay.io/submariner
+  serviceCIDR: ""
+  serviceDiscoveryEnabled: true
+  version: 0.6.1
+status:
+  clusterCIDR: 10.244.0.0/16
+  clusterID: cluster2
+  colorCodes: blue
+  engineDaemonSetStatus:
+    currentNumberScheduled: 1
+    desiredNumberScheduled: 1
+    numberAvailable: 1
+    numberMisscheduled: 0
+    numberReady: 1
+    observedGeneration: 1
+    updatedNumberScheduled: 1
+  gateways:
+  - apiVersion: submariner.io/v1
+    kind: Gateway
+    metadata:
+      annotations:
+        update-timestamp: "1600257200"
+      creationTimestamp: "2020-09-16T11:38:23Z"
+      generation: 52
+      managedFields:
+      - apiVersion: submariner.io/v1
+        fieldsType: FieldsV1
+        fieldsV1:
+          f:metadata:
+            f:annotations:
+              .: {}
+              f:update-timestamp: {}
+          f:status:
+            .: {}
+            f:connections: {}
+            f:haStatus: {}
+            f:localEndpoint:
+              .: {}
+              f:backend: {}
+              f:cable_name: {}
+              f:cluster_id: {}
+              f:hostname: {}
+              f:nat_enabled: {}
+              f:private_ip: {}
+              f:public_ip: {}
+              f:subnets: {}
+            f:statusFailure: {}
+            f:version: {}
+        manager: submariner-engine
+        operation: Update
+        time: "2020-09-16T11:53:20Z"
+      name: test2-worker
+      namespace: submariner-operator
+      ownerReferences:
+      - apiVersion: submariner.io/v1alpha1
+        blockOwnerDeletion: true
+        controller: true
+        kind: Submariner
+        name: submariner
+        uid: f635ee98-dc2c-4ec3-94cf-5c17e7ca8eb9
+      resourceVersion: "103237"
+      selfLink: /apis/submariner.io/v1/namespaces/submariner-operator/gateways/test2-worker
+      uid: 14c81e8a-cb18-43c2-a17f-32832037cfbd
+    status:
+      connections:
+      - endpoint:
+          backend: strongswan
+          cable_name: submariner-cable-cluster3-172-18-0-8
+          cluster_id: cluster3
+          hostname: test3-worker
+          nat_enabled: true
+          private_ip: 172.18.0.8
+          public_ip: 66.187.232.128
+          subnets:
+          - 10.96.0.0/12
+          - 10.244.0.0/16
+        status: connecting
+        statusMessage: Connecting to 66.187.232.128:500
+      - endpoint:
+          backend: strongswan
+          cable_name: submariner-cable-test3-172-18-0-8
+          cluster_id: test3
+          hostname: test3-worker
+          nat_enabled: true
+          private_ip: 172.18.0.8
+          public_ip: 66.187.232.128
+          subnets:
+          - 10.96.0.0/12
+          - 10.244.0.0/16
+        status: error
+        statusMessage: No IKE SA found for cable submariner-cable-test3-172-18-0-8
+      haStatus: active
+      localEndpoint:
+        backend: strongswan
+        cable_name: submariner-cable-cluster2-172-18-0-3
+        cluster_id: cluster2
+        hostname: test2-worker
+        nat_enabled: true
+        private_ip: 172.18.0.3
+        public_ip: 66.187.232.128
+        subnets:
+        - 10.96.0.0/12
+        - 10.244.0.0/16
+      statusFailure: ""
+      version: v0.6.0
+  natEnabled: true
+  routeAgentDaemonSetStatus:
+    currentNumberScheduled: 2
+    desiredNumberScheduled: 2
+    numberAvailable: 2
+    numberMisscheduled: 0
+    numberReady: 2
+    observedGeneration: 1
+    updatedNumberScheduled: 2
+  serviceCIDR: 10.96.0.0/12
