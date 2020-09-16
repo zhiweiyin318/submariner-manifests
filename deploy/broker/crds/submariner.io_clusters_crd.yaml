@@ -4,10 +4,13 @@ metadata:
   name: clusters.submariner.io
 spec:
   group: submariner.io
-  version: v1
   names:
     kind: Cluster
     listKind: ClusterList
     plural: clusters
     singular: cluster
   scope: Namespaced
+  versions:
+  - name: v1
+    served: true
+    storage: true

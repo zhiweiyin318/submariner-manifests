@@ -4,10 +4,13 @@ metadata:
   name: endpoints.submariner.io
 spec:
   group: submariner.io
-  version: v1
   names:
     kind: Endpoint
     listKind: EndpointList
     plural: endpoints
     singular: endpoint
   scope: Namespaced
+  versions:
+  - name: v1
+    served: true
+    storage: true
