@@ -1,0 +1,28 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  creationTimestamp: "2020-09-15T14:48:42Z"
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:roleRef:
+        f:apiGroup: {}
+        f:kind: {}
+        f:name: {}
+      f:subjects: {}
+    manager: subctl
+    operation: Update
+    time: "2020-09-15T14:48:42Z"
+  name: submariner-operator
+  namespace: submariner-operator
+  resourceVersion: "54666"
+  selfLink: /apis/rbac.authorization.k8s.io/v1/namespaces/submariner-operator/rolebindings/submariner-operator
+  uid: 054cf1e3-c4a1-454d-bbf6-2394f73c6b09
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: submariner-operator
+subjects:
+- kind: ServiceAccount
+  name: submariner-operator

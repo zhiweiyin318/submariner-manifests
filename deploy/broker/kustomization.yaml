@@ -1,0 +1,14 @@
+resources:
+- ns.yaml
+- crds/lighthouse.submariner.io_serviceimports_crd.yaml
+- crds/submariner.io_clusters_crd.yaml
+- crds/submariner.io_endpoints_crd.yaml
+- crds/lighthouse.submariner.io_multiclusterservices_crd.yaml
+- crds/submariner.io_gateways_crd.yaml
+- crds/lighthouse.submariner.io_serviceexports_crd.yaml
+- rbac/cluster-role.yaml
+- rbac/cluster-rolebinding.yaml
+- rbac/admin-sa.yaml
+- rbac/admin-rolebinding.yaml
+- rbac/client-sa.yaml
+- rbac/admin-role.yaml

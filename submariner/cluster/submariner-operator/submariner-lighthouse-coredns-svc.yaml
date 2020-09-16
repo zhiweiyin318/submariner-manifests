@@ -1,0 +1,51 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2020-09-15T14:48:53Z"
+  labels:
+    app: submariner-lighthouse-coredns
+    component: submariner-lighthouse
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:app: {}
+          f:component: {}
+      f:spec:
+        f:ports:
+          .: {}
+          k:{"port":53,"protocol":"UDP"}:
+            .: {}
+            f:name: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+        f:selector:
+          .: {}
+          f:app: {}
+        f:sessionAffinity: {}
+        f:type: {}
+    manager: submariner-operator
+    operation: Update
+    time: "2020-09-15T14:48:53Z"
+  name: submariner-lighthouse-coredns
+  namespace: submariner-operator
+  resourceVersion: "54831"
+  selfLink: /api/v1/namespaces/submariner-operator/services/submariner-lighthouse-coredns
+  uid: 89e39ea2-af0b-4f66-a0b5-bb3982476629
+spec:
+  clusterIP: 10.105.147.225
+  ports:
+  - name: udp
+    port: 53
+    protocol: UDP
+    targetPort: 53
+  selector:
+    app: submariner-lighthouse-coredns
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}

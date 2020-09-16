@@ -1,0 +1,17 @@
+[centos@yzw submariner]$ subctl join --kubeconfig /home/centos/kubeconfig-test3 broker-info.subm --clusterid cluster3
+* broker-info.subm says broker is at: https://10.0.118.46:42415
+* There are 1 labeled nodes in the cluster:
+  - test3-worker
+    Discovered network details:
+        Network plugin:  generic
+        Service CIDRs:   [10.96.0.0/12]
+        Cluster CIDRs:   [10.244.0.0/16]
+ ✓ Discovering network details
+ ✓ Validating Globalnet configurations
+ ✓ Discovering multi cluster details
+ 
+ ✓ Deploying the Submariner operator
+ ✓ Created Lighthouse service accounts and roles
+ ✓ Creating SA for cluster
+ ✓ Deploying Submariner
+ ✓ Submariner is up and running

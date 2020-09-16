@@ -1,0 +1,14 @@
+apiVersion: submariner.io/v1
+kind: Cluster
+metadata:
+  name: test2
+  namespace: submariner-operator
+spec:
+  cluster_cidr:
+  - 10.244.0.0/16
+  cluster_id: test2
+  color_codes:
+  - blue
+  global_cidr: []
+  service_cidr:
+  - 10.96.0.0/12

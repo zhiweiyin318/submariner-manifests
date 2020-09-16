@@ -1,0 +1,76 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2020-09-15T14:48:48Z"
+  labels:
+    name: submariner-operator
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:name: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"4fab6983-a58e-45ad-8c8e-60d8007de134"}:
+            .: {}
+            f:apiVersion: {}
+            f:blockOwnerDeletion: {}
+            f:controller: {}
+            f:kind: {}
+            f:name: {}
+            f:uid: {}
+      f:spec:
+        f:ports:
+          .: {}
+          k:{"port":8383,"protocol":"TCP"}:
+            .: {}
+            f:name: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+          k:{"port":8686,"protocol":"TCP"}:
+            .: {}
+            f:name: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+        f:selector:
+          .: {}
+          f:name: {}
+        f:sessionAffinity: {}
+        f:type: {}
+    manager: submariner-operator
+    operation: Update
+    time: "2020-09-15T14:48:48Z"
+  name: submariner-operator-metrics
+  namespace: submariner-operator
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Deployment
+    name: submariner-operator
+    uid: 4fab6983-a58e-45ad-8c8e-60d8007de134
+  resourceVersion: "54748"
+  selfLink: /api/v1/namespaces/submariner-operator/services/submariner-operator-metrics
+  uid: a69747a9-a04f-4107-9d65-3f2278bd1ffc
+spec:
+  clusterIP: 10.98.134.167
+  ports:
+  - name: http-metrics
+    port: 8383
+    protocol: TCP
+    targetPort: 8383
+  - name: cr-metrics
+    port: 8686
+    protocol: TCP
+    targetPort: 8686
+  selector:
+    name: submariner-operator
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}

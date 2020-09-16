@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  creationTimestamp: "2020-09-15T14:48:42Z"
+  name: submariner-lighthouse
+  namespace: submariner-operator
+  resourceVersion: "54695"
+  selfLink: /api/v1/namespaces/submariner-operator/serviceaccounts/submariner-lighthouse
+  uid: bdb6c1a7-1424-481c-8f65-27aa7e36d626
+secrets:
+- name: submariner-lighthouse-token-pqkpg

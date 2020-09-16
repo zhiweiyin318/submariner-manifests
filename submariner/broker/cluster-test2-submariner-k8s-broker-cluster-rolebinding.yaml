@@ -1,0 +1,29 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  creationTimestamp: "2020-09-15T14:48:47Z"
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:roleRef:
+        f:apiGroup: {}
+        f:kind: {}
+        f:name: {}
+      f:subjects: {}
+    manager: subctl
+    operation: Update
+    time: "2020-09-15T14:48:47Z"
+  name: cluster-test2-submariner-k8s-broker-cluster
+  namespace: submariner-k8s-broker
+  resourceVersion: "51294"
+  selfLink: /apis/rbac.authorization.k8s.io/v1/namespaces/submariner-k8s-broker/rolebindings/cluster-test2-submariner-k8s-broker-cluster
+  uid: ec57a2b8-56a6-4e37-ac99-51aff7e71a5b
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: submariner-k8s-broker-cluster
+subjects:
+- kind: ServiceAccount
+  name: cluster-test2
+  namespace: submariner-k8s-broker
