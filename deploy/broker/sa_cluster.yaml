@@ -1,0 +1,3 @@
+metadata:
+  name: cluster-cluster2
+  namespace: submariner-k8s-broker
