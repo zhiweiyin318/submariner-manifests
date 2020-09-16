@@ -6,6 +6,7 @@ metadata:
 subjects:
   - kind: ServiceAccount
     name: submariner-lighthouse
+    namespace: submariner-operator
 roleRef:
   kind: ClusterRole
   name: submariner-lighthouse
