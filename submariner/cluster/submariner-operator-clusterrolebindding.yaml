@@ -1,30 +1,7 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  annotations:
-    kubectl.kubernetes.io/last-applied-configuration: |
-      {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"ClusterRoleBinding","metadata":{"annotations":{},"name":"submariner-operator"},"roleRef":{"apiGroup":"rbac.authorization.k8s.io","kind":"ClusterRole","name":"submariner-operator"},"subjects":[{"kind":"ServiceAccount","name":"submariner-operator","namespace":"submariner-operator"}]}
-  creationTimestamp: "2020-09-16T12:16:15Z"
-  managedFields:
-  - apiVersion: rbac.authorization.k8s.io/v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
-          .: {}
-          f:kubectl.kubernetes.io/last-applied-configuration: {}
-      f:roleRef:
-        f:apiGroup: {}
-        f:kind: {}
-        f:name: {}
-      f:subjects: {}
-    manager: kubectl
-    operation: Update
-    time: "2020-09-16T12:16:15Z"
   name: submariner-operator
-  resourceVersion: "916"
-  selfLink: /apis/rbac.authorization.k8s.io/v1/clusterrolebindings/submariner-operator
-  uid: 1010d588-45c6-4549-baf0-59796bcdf1f2
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
