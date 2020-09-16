@@ -2,6 +2,7 @@ resources:
 - ns.yaml
 - crds/submariner.io_submariners_crd.yaml
 - crds/submariner.io_servicediscoveries_crd.yaml
+- crds/submariner.io_gateways_crd.yaml
 - rbac/role.yaml
 - rbac/cluster_role.yaml
 - rbac/role_binding.yaml
