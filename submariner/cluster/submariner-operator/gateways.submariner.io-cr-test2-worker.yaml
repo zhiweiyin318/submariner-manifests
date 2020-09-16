@@ -1,5 +1,0 @@
-apiVersion: submariner.io/v1
-kind: Gateway
-metadata:
-  name: test2-worker
-  namespace: submariner-operator

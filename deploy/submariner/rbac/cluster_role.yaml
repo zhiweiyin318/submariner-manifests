@@ -3,9 +3,6 @@ kind: ClusterRole
 metadata:
   name: submariner-operator
 rules:
-  # submariner-operator updates the config map of core-dns to forward requests to
-  # clusterset.local to Lighthouse DNS, also looks at existing configmaps
-  # to figure out network settings
   - apiGroups:
       - ""
     resources:
@@ -15,7 +12,7 @@ rules:
       - list
       - watch
       - update
-  - apiGroups:  # pods and services are looked up to figure out network settings
+  - apiGroups:
       - ""
     resources:
       - pods

@@ -1,0 +1,213 @@
+apiVersion: work.open-cluster-management.io/v1
+kind: ManifestWork
+metadata:
+  name: submariner-agent-rbac
+  namespace: cluster2
+spec:
+  workload:
+    manifests:
+    - apiVersion: v1
+      kind: Namespace
+      metadata:
+        name: submariner-operator
+    - apiVersion: v1
+      kind: ServiceAccount
+      metadata:
+        name: submariner-operator
+        namespace: submariner-operator
+    - apiVersion: v1
+      kind: ServiceAccount
+      metadata:
+        name: submariner-lighthouse
+        namespace: submariner-operator
+    - apiVersion: rbac.authorization.k8s.io/v1
+      kind: ClusterRole
+      metadata:
+        name: submariner-operator
+      rules:
+        - apiGroups:
+            - ""
+          resources:
+            - configmaps
+          verbs:
+            - get
+            - list
+            - watch
+            - update
+        - apiGroups:
+            - ""
+          resources:
+            - pods
+            - services
+          verbs:
+            - get
+            - list
+            - watch
+        - apiGroups:
+            - operator.openshift.io
+          resources:
+            - dnses
+          verbs:
+            - get
+            - list
+            - watch
+            - update
+        - apiGroups:
+            - config.openshift.io
+          resources:
+            - networks
+          verbs:
+            - get
+            - list
+        - apiGroups:
+            - network.openshift.io
+          resources:
+            - clusternetworks
+          verbs:
+            - get
+            - list
+    - apiVersion: rbac.authorization.k8s.io/v1
+      kind: ClusterRoleBinding
+      metadata:
+        name: submariner-operator
+      subjects:
+        - kind: ServiceAccount
+          name: submariner-operator
+          namespace: submariner-operator
+      roleRef:
+        apiGroup: rbac.authorization.k8s.io
+        kind: ClusterRole
+        name: submariner-operator
+    - apiVersion: rbac.authorization.k8s.io/v1
+      kind: ClusterRole
+      metadata:
+        name: submariner-lighthouse
+      rules:
+        - apiGroups:
+            - ""
+          resources:
+            - services
+            - namespaces
+            - endpoints
+          verbs:
+            - get
+            - list
+            - watch
+            - update
+        - apiGroups:
+            - discovery.k8s.io
+          resources:
+            - endpointslices
+          verbs:
+            - create
+            - get
+            - list
+            - watch
+            - update
+            - delete
+            - deletecollection
+        - apiGroups:
+            - lighthouse.submariner.io
+          resources:
+            - "*"
+          verbs:
+            - create
+            - get
+            - list
+            - watch
+            - update
+            - delete
+        - apiGroups:
+            - submariner.io
+          resources:
+            - "gateways"
+          verbs:
+            - get
+            - list
+            - watch
+    - apiVersion: rbac.authorization.k8s.io/v1
+      kind: ClusterRoleBinding
+      metadata:
+        name: submariner-lighthouse
+      subjects:
+        - kind: ServiceAccount
+          name: submariner-lighthouse
+          namespace: submariner-operator
+      roleRef:
+        kind: ClusterRole
+        name: submariner-lighthouse
+        apiGroup: rbac.authorization.k8s.io
+    - apiVersion: rbac.authorization.k8s.io/v1
+      kind: Role
+      metadata:
+        name: submariner-operator
+        namespace: submariner-operator
+      rules:
+        - apiGroups:
+            - ""
+          resources:
+            - pods
+            - services
+            - services/finalizers
+            - endpoints
+            - persistentvolumeclaims
+            - events
+            - configmaps
+            - secrets
+          verbs:
+            - '*'
+        - apiGroups:
+            - apps
+          resources:
+            - deployments
+            - daemonsets
+            - replicasets
+            - statefulsets
+          verbs:
+            - '*'
+        - apiGroups:
+            - monitoring.coreos.com
+          resources:
+            - servicemonitors
+          verbs:
+            - get
+            - create
+        - apiGroups:
+            - apps
+          resourceNames:
+            - submariner-operator
+          resources:
+            - deployments/finalizers
+          verbs:
+            - update
+        - apiGroups:
+            - ""
+          resources:
+            - pods
+          verbs:
+            - get
+        - apiGroups:
+            - apps
+          resources:
+            - replicasets
+          verbs:
+            - get
+        - apiGroups:
+            - submariner.io
+          resources:
+            - '*'
+            - servicediscoveries
+          verbs:
+            - '*'
+    - apiVersion: rbac.authorization.k8s.io/v1
+      kind: RoleBinding
+      metadata:
+        name: submariner-operator
+        namespace: submariner-operator
+      subjects:
+        - kind: ServiceAccount
+          name: submariner-operator
+      roleRef:
+        kind: Role
+        name: submariner-operator
+        apiGroup: rbac.authorization.k8s.io

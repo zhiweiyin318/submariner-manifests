@@ -1,6 +1,8 @@
 resources:
 - crds/submariner.io_submariners_crd.yaml
 - crds/submariner.io_gateways_crd.yaml
+- crds/submariner.io_clusters_crd.yaml
+- crds/submariner.io_endpoints_crd.yaml
 - ns.yaml
 - rbac/operator_sa.yaml
 - rbac/role.yaml
